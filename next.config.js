@@ -22,6 +22,15 @@ function getSecrets(isServer) {
   }
 }
 
+function getPort() {
+  let port = 3000;
+  const i = process.argv.indexOf('-p');
+  if (i !== -1) {
+    return Number(process.argv[i + 1]);
+  }
+  return port;
+}
+
 module.exports = {
   compress: true,
   webpack: (config, { buildId, dev, isServer, webpack }) => {
@@ -37,6 +46,7 @@ module.exports = {
         ),
         IS_SERVER: isServer,
         IS_PRODUCTION: !dev,
+        SERVER_PORT: getPort(),
         ...getSecrets(isServer),
       })
     );
