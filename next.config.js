@@ -2,6 +2,7 @@ const packageJson = require('./package.json');
 
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin();
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 /**
  * Read the constants to define as ENV vars from the secrets file
@@ -38,6 +39,10 @@ module.exports = {
         IS_PRODUCTION: !dev,
         ...getSecrets(isServer),
       })
+    );
+
+    config.resolve.plugins.push(
+      new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })
     );
 
     return config;
