@@ -33,6 +33,11 @@ function getPort() {
 
 module.exports = {
   compress: true,
+  api: {
+    bodyParser: {
+      sizeLimit: '500kb',
+    },
+  },
   webpack: (config, { buildId, dev, isServer, webpack }) => {
     config.plugins.push(
       gitRevisionPlugin,
