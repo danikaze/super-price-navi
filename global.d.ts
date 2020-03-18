@@ -22,6 +22,8 @@ declare const COMMIT_HASH_SHORT: string;
 declare const IS_SERVER: boolean;
 /** Env constant set to `true` for the production build, `false` for development */
 declare const IS_PRODUCTION: boolean;
+/** Env cosnsant especifying the port the server is runing on */
+declare const SERVER_PORT: number;
 
 /*
  * Constants from `secret.js`, only available in server side
