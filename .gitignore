@@ -9,6 +9,8 @@ node_modules
 .next
 launch.json
 coverage
+secrets.js
+secrets.json
 
 # =========================
 # Operating System Files
