@@ -1,7 +1,13 @@
+/*
+ * Configuration
+ */
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.gif';
 
+/*
+ * Constants set in the webpack build for both client and server side
+ */
 /** Env constant set to (package.json).name */
 declare const PACKAGE_NAME: string;
 /** Env constant set to (package.json).version */
@@ -16,3 +22,7 @@ declare const COMMIT_HASH_SHORT: string;
 declare const IS_SERVER: boolean;
 /** Env constant set to `true` for the production build, `false` for development */
 declare const IS_PRODUCTION: boolean;
+
+/*
+ * Constants from `secret.js`, only available in server side
+ */

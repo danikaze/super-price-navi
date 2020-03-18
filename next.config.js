@@ -3,6 +3,24 @@ const packageJson = require('./package.json');
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin();
 
+/**
+ * Read the constants to define as ENV vars from the secrets file
+ * It will return an empty file if the file is not found or if the build is not for server side
+ */
+function getSecrets(isServer) {
+  let res = {};
+  try {
+    if (isServer) {
+      const secrets = require('./secrets');
+      Object.entries(secrets).forEach(([key, value]) => {
+        res[key] = JSON.stringify(value);
+      });
+    }
+  } finally {
+    return res;
+  }
+}
+
 module.exports = {
   compress: true,
   webpack: (config, { buildId, dev, isServer, webpack }) => {
@@ -18,6 +36,7 @@ module.exports = {
         ),
         IS_SERVER: isServer,
         IS_PRODUCTION: !dev,
+        ...getSecrets(isServer),
       })
     );
 

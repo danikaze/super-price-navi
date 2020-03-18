@@ -8,6 +8,8 @@ logs/*
 node_modules
 .next
 coverage
+secrets.js
+secrets.json
 
 # =========================
 # Operating System Files
