@@ -14,7 +14,12 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@util": ["util"],
+      "@util/*": ["util/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]

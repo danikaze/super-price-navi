@@ -419,7 +419,5 @@ rules:
     - true
     - dev
     # Our custom aliases/absolute-pathes
-    - - test
-      - app
-      - components
-      - components-library
+    - - util
+      - types
