@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { HttpMethod, ScalarKeyValue } from 'types/shared';
+import { HttpMethod, ScalarKeyValue } from '@td/shared';
 
 // TODO: Properly full-type all APIs based on their url
 // tslint:disable:no-any

@@ -419,5 +419,10 @@ rules:
     - true
     - dev
     # Our custom aliases/absolute-pathes
-    - - util
-      - types
+    - - '@api'
+      - '@components'
+      - '@constants'
+      - '@model'
+      - '@pages'
+      - '@td'
+      - '@util'

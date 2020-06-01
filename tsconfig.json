@@ -17,6 +17,18 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@api": ["api"],
+      "@api/*": ["api/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+      "@model": ["model"],
+      "@model/*": ["model/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@td": ["td"],
+      "@td/*": ["td/*"],
       "@util": ["util"],
       "@util/*": ["util/*"]
     }
