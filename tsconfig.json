@@ -11,10 +11,27 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@api": ["api"],
+      "@api/*": ["api/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+      "@model": ["model"],
+      "@model/*": ["model/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@td": ["td"],
+      "@td/*": ["td/*"],
+      "@util": ["util"],
+      "@util/*": ["util/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
