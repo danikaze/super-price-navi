@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
-import { apiCall } from 'util/api-call';
+import Link from 'next/link';
+import { apiCall } from '@util/api-call';
 
 const Index: NextPage = props => {
   const envList = Object.entries(props).map(([key, value]) => (
@@ -12,6 +13,23 @@ const Index: NextPage = props => {
 
   return (
     <div>
+      <ul>
+        <li>
+          <Link href="/shop/new">
+            <a>Add new shop</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/shop/search">
+            <a>List of shops</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/item/new">
+            <a>Add new item</a>
+          </Link>
+        </li>
+      </ul>
       <b>Defined Constants:</b>
       <ul>{envList}</ul>
     </div>

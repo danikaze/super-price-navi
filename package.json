@@ -36,6 +36,7 @@
     "@material-ui/icons": "^4.9.1",
     "@types/mongodb": "^3.5.18",
     "axios": "^0.19.2",
+    "deep-object-diff": "^1.1.0",
     "mongodb": "^3.5.7",
     "next": "^9.4.1",
     "next-i18next": "^4.4.2",
