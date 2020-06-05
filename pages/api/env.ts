@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { SERVER_PORT } from '@constants/app';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   res.json({
